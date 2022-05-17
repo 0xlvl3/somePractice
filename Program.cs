@@ -149,8 +149,22 @@ double floorPlanCost = costTriangle + costCircle + costRectangle / 2 * costInPes
 //using math.round to round the floor plan to the decimal place that was required which was 2
 Console.WriteLine($"The current cost of the floor plan all totaled will be {Math.Round(floorPlanCost, 2)} peso");
 
-//next job is to create a method for the total cost of the floor plan
+TotalCost();
 
+//next job is to create a method for the total cost of the floor plan
+static string TotalCost()
+{
+    string message;
+    double rectangle = 1500 * 2500;
+    double triangle = 750 * 500;
+    double cirlce = Math.PI * Math.Pow(375, 2) / 2;
+    double totalCost = triangle + rectangle + cirlce;
+    message = $"{totalCost} this is the message";
+    Console.WriteLine(message);
+    return message;
+    
+    
+}
 
 //method for getting the area of rectangle
 static double Rectangle(double length, double width)
